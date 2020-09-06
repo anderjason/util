@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Percent = void 0;
-const __1 = require("..");
 class Percent {
     constructor(value) {
         this._value = value;
@@ -48,6 +47,9 @@ class Percent {
         if (other == null) {
             return false;
         }
+        if (!(other instanceof Percent)) {
+            return false;
+        }
         return this._value === other._value;
     }
     toString(fractionDigits) {
@@ -55,9 +57,6 @@ class Percent {
     }
     toNumber(denominator) {
         return this._value * denominator;
-    }
-    withHardLimit() {
-        return new Percent(__1.NumberUtil.numberWithHardLimit(this._value, 0, 1));
     }
 }
 exports.Percent = Percent;

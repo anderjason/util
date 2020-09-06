@@ -11,5 +11,4 @@ export declare class Percent {
     isEqual(other: Percent): boolean;
     toString(fractionDigits?: number): string;
     toNumber(denominator: number): number;
-    withHardLimit(): Percent;
 }

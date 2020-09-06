@@ -1,5 +1,3 @@
-import { NumberUtil } from "..";
-
 export class Percent {
   static isEqual(a: Percent, b: Percent): boolean {
     if (a == null && b == null) {
@@ -60,6 +58,10 @@ export class Percent {
       return false;
     }
 
+    if (!(other instanceof Percent)) {
+      return false;
+    }
+
     return this._value === other._value;
   }
 
@@ -69,9 +71,5 @@ export class Percent {
 
   toNumber(denominator: number): number {
     return this._value * denominator;
-  }
-
-  withHardLimit(): Percent {
-    return new Percent(NumberUtil.numberWithHardLimit(this._value, 0, 1));
   }
 }

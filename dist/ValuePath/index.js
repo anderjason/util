@@ -42,6 +42,9 @@ class ValuePath {
         if (other == null) {
             return false;
         }
+        if (!(other instanceof ValuePath)) {
+            return false;
+        }
         return this.toString() === other.toString();
     }
     isAncestorOf(other) {
