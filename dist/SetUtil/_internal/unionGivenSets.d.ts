@@ -1,1 +1,1 @@
-export declare function unionGivenSets<T>(...sets: Set<T>[]): Set<unknown>;
+export declare function unionGivenSets<T>(sets: Set<T>[]): Set<unknown>;

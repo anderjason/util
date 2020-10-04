@@ -38,6 +38,9 @@ class ValuePath {
     get isEmpty() {
         return this._pathParts.length === 0;
     }
+    get length() {
+        return this._pathParts.length;
+    }
     isEqual(other) {
         if (other == null) {
             return false;

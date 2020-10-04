@@ -1,0 +1,1 @@
+{"version":3,"file":"integerGivenIntegerLike.js","sourceRoot":"","sources":["../../../src/NumberUtil/_internal/integerGivenIntegerLike.ts"],"names":[],"mappings":";;;AAAA,SAAgB,uBAAuB,CAAC,KAAU;IAChD,IAAI,KAAK,IAAI,IAAI,EAAE;QACjB,OAAO,SAAS,CAAC;KAClB;IAED,IAAI,OAAO,KAAK,KAAK,QAAQ,EAAE;QAC7B,OAAO,KAAK,CAAC;KACd;IAED,OAAO,QAAQ,CAAC,KAAK,EAAE,EAAE,CAAC,CAAC;AAC7B,CAAC;AAVD,0DAUC"}

@@ -1,4 +1,4 @@
-export function unionGivenSets<T>(...sets: Set<T>[]) {
+export function unionGivenSets<T>(sets: Set<T>[]) {
   if (!Array.isArray(sets)) {
     throw new Error("First argument should be an array");
   }

@@ -1,1 +1,1 @@
-export declare function unionGivenObjects(...objects: any[]): any;
+export declare function unionGivenObjects(objects: any[]): any;

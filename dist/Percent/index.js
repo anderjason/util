@@ -32,10 +32,13 @@ class Percent {
         return new Percent(numerator / denominator);
     }
     static ofZero() {
-        return new Percent(0);
+        return this._zero;
+    }
+    static ofHalf() {
+        return this._half;
     }
     static ofFull() {
-        return new Percent(1);
+        return this._full;
     }
     get isZero() {
         return this._value === 0;
@@ -58,6 +61,15 @@ class Percent {
     toNumber(denominator) {
         return this._value * denominator;
     }
+    withInverse() {
+        if (this.isZero || this.isFull) {
+            return this;
+        }
+        return Percent.givenFraction(1, this.toNumber(1));
+    }
 }
 exports.Percent = Percent;
+Percent._zero = new Percent(0);
+Percent._half = new Percent(0.5);
+Percent._full = new Percent(1);
 //# sourceMappingURL=index.js.map

@@ -1,4 +1,4 @@
-export function unionGivenMaps<K, V>(...iterables: Map<K, V>[]): Map<K, V> {
+export function unionGivenMaps<K, V>(iterables: Map<K, V>[]): Map<K, V> {
   const result = new Map<K, V>();
 
   for (let iterable of iterables) {

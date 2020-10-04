@@ -51,6 +51,10 @@ export class ValuePath {
     return this._pathParts.length === 0;
   }
 
+  get length(): number {
+    return this._pathParts.length;
+  }
+
   isEqual(other: ValuePath): boolean {
     if (other == null) {
       return false;

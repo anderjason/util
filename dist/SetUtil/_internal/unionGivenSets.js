@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.unionGivenSets = void 0;
-function unionGivenSets(...sets) {
+function unionGivenSets(sets) {
     if (!Array.isArray(sets)) {
         throw new Error("First argument should be an array");
     }

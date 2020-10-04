@@ -7,6 +7,7 @@ export declare class ValuePath {
     private _pathParts;
     private constructor();
     get isEmpty(): boolean;
+    get length(): number;
     isEqual(other: ValuePath): boolean;
     isAncestorOf(other: ValuePath): boolean;
     isEqualOrAncestorOf(other: ValuePath): boolean;

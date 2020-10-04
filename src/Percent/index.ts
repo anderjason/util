@@ -1,4 +1,8 @@
 export class Percent {
+  private static _zero = new Percent(0);
+  private static _half = new Percent(0.5);
+  private static _full = new Percent(1);
+
   static isEqual(a: Percent, b: Percent): boolean {
     if (a == null && b == null) {
       return true;
@@ -32,11 +36,15 @@ export class Percent {
   }
 
   static ofZero(): Percent {
-    return new Percent(0);
+    return this._zero;
+  }
+
+  static ofHalf(): Percent {
+    return this._half;
   }
 
   static ofFull(): Percent {
-    return new Percent(1);
+    return this._full;
   }
 
   private _value: number;
@@ -71,5 +79,13 @@ export class Percent {
 
   toNumber(denominator: number): number {
     return this._value * denominator;
+  }
+
+  withInverse(): Percent {
+    if (this.isZero || this.isFull) {
+      return this;
+    }
+
+    return Percent.givenFraction(1, this.toNumber(1));
   }
 }

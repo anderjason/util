@@ -1,10 +1,12 @@
 import { arrayIsEmptyOrNull } from "./_internal/arrayIsEmptyOrNull";
 import { arrayWithEqualSizeGroups } from "./_internal/arrayWithEqualSizeGroups";
+import { arrayWithLeftShift } from "./_internal/arrayWithLeftShift";
 import { arrayWithOrderFromValue } from "./_internal/arrayWithOrderFromValue";
 import { arrayWithoutDuplicateValues } from "./_internal/arrayWithoutDuplicateValues";
 import { arrayWithoutValue } from "./_internal/arrayWithoutValue";
 import { arrayWithPageSubset } from "./_internal/arrayWithPageSubset";
 import { arrayWithReversedOrder } from "./_internal/arrayWithReversedOrder";
+import { arrayWithRightShift } from "./_internal/arrayWithRightShift";
 import { arrayWithValue } from "./_internal/arrayWithValue";
 import { numberArrayGivenRange } from "./_internal/numberArrayGivenRange";
 import { optionalIndexOfFirstMatchGivenArray } from "./_internal/optionalIndexOfFirstMatchGivenArray";
@@ -15,11 +17,13 @@ import { valueGivenArray } from "./_internal/valueGivenArray";
 export declare class ArrayUtil {
     static arrayIsEmptyOrNull: typeof arrayIsEmptyOrNull;
     static arrayWithEqualSizeGroups: typeof arrayWithEqualSizeGroups;
+    static arrayWithLeftShift: typeof arrayWithLeftShift;
     static arrayWithOrderFromValue: typeof arrayWithOrderFromValue;
     static arrayWithoutDuplicateValues: typeof arrayWithoutDuplicateValues;
     static arrayWithoutValue: typeof arrayWithoutValue;
     static arrayWithPageSubset: typeof arrayWithPageSubset;
     static arrayWithReversedOrder: typeof arrayWithReversedOrder;
+    static arrayWithRightShift: typeof arrayWithRightShift;
     static arrayWithValue: typeof arrayWithValue;
     static numberArrayGivenRange: typeof numberArrayGivenRange;
     static optionalIndexOfFirstMatchGivenArray: typeof optionalIndexOfFirstMatchGivenArray;

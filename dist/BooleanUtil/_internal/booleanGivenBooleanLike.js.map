@@ -1,0 +1,1 @@
+{"version":3,"file":"booleanGivenBooleanLike.js","sourceRoot":"","sources":["../../../src/BooleanUtil/_internal/booleanGivenBooleanLike.ts"],"names":[],"mappings":";;;AAAA,SAAgB,uBAAuB,CAAC,KAAU;IAChD,IAAI,KAAK,IAAI,IAAI,EAAE;QACjB,OAAO,SAAS,CAAC;KAClB;IAED,IAAI,OAAO,KAAK,KAAK,SAAS,EAAE;QAC9B,OAAO,KAAK,CAAC;KACd;IAED,OAAO,KAAK,KAAK,MAAM,CAAC;AAC1B,CAAC;AAVD,0DAUC"}
