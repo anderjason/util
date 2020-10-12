@@ -20,6 +20,10 @@ export function objectWithValueAtPath<T>(
 
   let length = parts.length;
 
+  if (length === 0) {
+    return value;
+  }
+
   // shallow clone
   let result: T;
   if (Array.isArray(object)) {

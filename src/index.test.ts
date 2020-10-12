@@ -1,6 +1,7 @@
 import { Test } from "@anderjason/tests";
 import "./ArrayUtil/index.test";
 import "./NumberUtil/index.test";
+import "./ObjectUtil/index.test";
 import "./Percent/index.test";
 import "./PromiseUtil/index.test";
 import "./StringUtil/index.test";

@@ -14,6 +14,9 @@ function objectWithValueAtPath(object, valuePath, value) {
         parts = valuePath.toParts();
     }
     let length = parts.length;
+    if (length === 0) {
+        return value;
+    }
     // shallow clone
     let result;
     if (Array.isArray(object)) {
