@@ -51,8 +51,6 @@ Test.define(
       message: "hello world",
     };
 
-    console.log(actual);
-
     Test.assertIsDeepEqual(actual, expected);
   }
 );

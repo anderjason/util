@@ -23,6 +23,10 @@ export function optionalValueAtPathGivenObject(
 
   let length = parts.length;
 
+  if (length === 0) {
+    return object;
+  }
+
   while (object != null && index < length) {
     object = object[parts[index++]];
   }
