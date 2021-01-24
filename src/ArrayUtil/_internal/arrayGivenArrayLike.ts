@@ -1,15 +1,14 @@
 import { NumberUtil } from "../..";
 
+/**
+ * Converts an object that has integer keys to an array. This is useful when an object looks like an array, but isn't actually one.
+ *
+ * @param input - An array, or an object with integer keys
+ * @returns An array, or the original input if the input is not an object or array
+ *
+ * @remarks This operation does not modify the input.
+ */
 export function arrayGivenArrayLike(input: any): any {
-  // sometimes Koji VCCs contain "array-like" objects, where
-  // the keys are all numbers. In other words, the object looks
-  // like an array, but isn't one.
-
-  // For example: {"0": "value", "1": "value", "2": "value"}
-
-  // This function attempts to detect those objects and
-  // convert them to actual JS arrays
-
   if (input == null) {
     return input;
   }

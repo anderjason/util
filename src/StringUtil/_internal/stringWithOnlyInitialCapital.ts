@@ -1,3 +1,5 @@
+import { stringWithSpaceCase } from "./stringWithSpaceCase";
+
 export function stringWithOnlyInitialCapital(input: string): string {
   if (input == null) {
     throw new Error("input is required");
@@ -7,5 +9,6 @@ export function stringWithOnlyInitialCapital(input: string): string {
     return input;
   }
 
-  return input.charAt(0).toUpperCase() + input.slice(1).toLowerCase();
+  const split = stringWithSpaceCase(input);
+  return split.charAt(0).toUpperCase() + split.slice(1).toLowerCase();
 }

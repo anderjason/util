@@ -1,6 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.valueGivenArray = void 0;
+/**
+ * Returns the first value in an array, or throws an error if the input is null or undefined, empty, or is not an array.
+ *
+ * @param input - An array
+ * @returns The first value in the array
+ */
 function valueGivenArray(array) {
     if (array == null) {
         throw new Error("array is required");

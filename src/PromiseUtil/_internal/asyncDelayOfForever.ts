@@ -1,3 +1,8 @@
+/**
+ * Creates a promise that never resolves.
+ *
+ * @returns A promise
+ */
 export function asyncDelayOfForever(): Promise<void> {
   // promise never resolves
 
