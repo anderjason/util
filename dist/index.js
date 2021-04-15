@@ -1,8 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ValuePath = exports.StringUtil = exports.SetUtil = exports.PromiseUtil = exports.Percent = exports.ObjectUtil = exports.NumberUtil = exports.MapUtil = exports.ArrayUtil = void 0;
+exports.ValuePath = exports.StringUtil = exports.SetUtil = exports.PromiseUtil = exports.Percent = exports.ObjectUtil = exports.NumberUtil = exports.MapUtil = exports.BooleanUtil = exports.ArrayUtil = void 0;
 const ArrayUtil_1 = require("./ArrayUtil");
 Object.defineProperty(exports, "ArrayUtil", { enumerable: true, get: function () { return ArrayUtil_1.ArrayUtil; } });
+const BooleanUtil_1 = require("./BooleanUtil");
+Object.defineProperty(exports, "BooleanUtil", { enumerable: true, get: function () { return BooleanUtil_1.BooleanUtil; } });
 const MapUtil_1 = require("./MapUtil");
 Object.defineProperty(exports, "MapUtil", { enumerable: true, get: function () { return MapUtil_1.MapUtil; } });
 const NumberUtil_1 = require("./NumberUtil");

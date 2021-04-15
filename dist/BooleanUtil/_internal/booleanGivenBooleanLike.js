@@ -16,7 +16,10 @@ function booleanGivenBooleanLike(input) {
     if (typeof input === "boolean") {
         return input;
     }
-    return input === "true";
+    if (typeof input === "string") {
+        return input.toLowerCase() === "true";
+    }
+    throw new Error(`Unsupported input type in booleanGivenBooleanLike (got ${typeof input}, expected boolean or string)`);
 }
 exports.booleanGivenBooleanLike = booleanGivenBooleanLike;
 //# sourceMappingURL=booleanGivenBooleanLike.js.map
