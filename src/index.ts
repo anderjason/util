@@ -1,4 +1,5 @@
 import { ArrayUtil } from "./ArrayUtil";
+import { BooleanUtil } from "./BooleanUtil";
 import { MapUtil } from "./MapUtil";
 import { NumberUtil } from "./NumberUtil";
 import { ObjectUtil } from "./ObjectUtil";
@@ -10,6 +11,7 @@ import { ValuePath } from "./ValuePath";
 
 export {
   ArrayUtil,
+  BooleanUtil,
   MapUtil,
   NumberUtil,
   ObjectUtil,

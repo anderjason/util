@@ -1,5 +1,6 @@
 import { Test } from "@anderjason/tests";
 import "./ArrayUtil/index.test";
+import "./BooleanUtil/index.test";
 import "./NumberUtil/index.test";
 import "./ObjectUtil/index.test";
 import "./Percent/index.test";
