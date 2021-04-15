@@ -3,6 +3,7 @@ import { stringWithOnlyInitialCapital } from "./stringWithOnlyInitialCapital";
 
 Test.define("stringWithOnlyInitialCapital returns the expected results", () => {
   const beforeAfter = [
+    ["helloWorld", "Hello world"],
     ["hello world", "Hello world"],
     ["Hello world", "Hello world"],
     ["HELLO WORLD", "Hello world"],

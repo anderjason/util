@@ -1,6 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.asyncDelayOfForever = void 0;
+/**
+ * Creates a promise that never resolves.
+ *
+ * @returns A promise
+ */
 function asyncDelayOfForever() {
     // promise never resolves
     return new Promise(() => {
