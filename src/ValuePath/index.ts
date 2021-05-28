@@ -1,6 +1,6 @@
 export type PathPart = string | number;
 
-export class ValuePath {
+export class ValuePath<T = unknown> {
   static isEqual(a: ValuePath, b: ValuePath): boolean {
     if (a == null && b == null) {
       return true;
@@ -13,7 +13,7 @@ export class ValuePath {
     return a.isEqual(b);
   }
 
-  static givenParts(pathParts: PathPart[] = []): ValuePath {
+  static givenParts<T = unknown>(pathParts: PathPart[] = []): ValuePath<T> {
     if (pathParts == null) {
       return new ValuePath([]);
     }
@@ -29,7 +29,7 @@ export class ValuePath {
     return new ValuePath(pathParts);
   }
 
-  static givenString(path: string = ""): ValuePath {
+  static givenString<T = unknown>(path: string = ""): ValuePath<T> {
     if (path == null) {
       return new ValuePath([]);
     }
@@ -55,7 +55,7 @@ export class ValuePath {
     return this._pathParts.length;
   }
 
-  isEqual(other: ValuePath): boolean {
+  isEqual(other: ValuePath<T>): boolean {
     if (other == null) {
       return false;
     }
@@ -119,7 +119,7 @@ export class ValuePath {
     return this._pathParts.join(".");
   }
 
-  toRelativePath(descendant: ValuePath): ValuePath {
+  toRelativePath<T = unknown>(descendant: ValuePath): ValuePath<T> {
     if (descendant == null) {
       throw new Error("Descendant is required");
     }
@@ -131,7 +131,7 @@ export class ValuePath {
     return new ValuePath(descendant.toParts().slice(this.toParts().length));
   }
 
-  withRelativeParts(pathParts: PathPart[] = []): ValuePath {
+  withRelativeParts<T = unknown>(pathParts: PathPart[] = []): ValuePath<T> {
     if (pathParts == null) {
       throw new Error("Path parts are required");
     }
@@ -139,7 +139,7 @@ export class ValuePath {
     return new ValuePath([...this._pathParts, ...pathParts]);
   }
 
-  withRelativeString(pathString: string): ValuePath {
+  withRelativeString<T = unknown>(pathString: string): ValuePath<T> {
     if (pathString == null) {
       throw new Error("Path string is required");
     }
