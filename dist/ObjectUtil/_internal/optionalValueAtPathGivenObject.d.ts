@@ -1,2 +1,2 @@
 import { ValuePath, PathPart } from "../../ValuePath";
-export declare function optionalValueAtPathGivenObject(object: any, valuePath: ValuePath | PathPart[]): any;
+export declare function optionalValueAtPathGivenObject<T = unknown>(object: any, valuePath: ValuePath<T> | PathPart[]): T;

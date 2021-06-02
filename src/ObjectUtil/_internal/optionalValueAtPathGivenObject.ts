@@ -1,9 +1,9 @@
 import { ValuePath, PathPart } from "../../ValuePath";
 
-export function optionalValueAtPathGivenObject(
+export function optionalValueAtPathGivenObject<T = unknown>(
   object: any,
-  valuePath: ValuePath | PathPart[]
-): any {
+  valuePath: ValuePath<T> | PathPart[]
+): T {
   if (valuePath == null) {
     throw new Error("Value path is required");
   }

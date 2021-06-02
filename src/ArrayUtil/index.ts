@@ -1,3 +1,5 @@
+import { arrayGivenArrayLike } from "./_internal/arrayGivenArrayLike";
+import { arrayGivenPattern } from "./_internal/arrayGivenPattern";
 import { arrayIsEmptyOrNull } from "./_internal/arrayIsEmptyOrNull";
 import { arrayWithEqualSizeGroups } from "./_internal/arrayWithEqualSizeGroups";
 import { arrayWithLeftShift } from "./_internal/arrayWithLeftShift";
@@ -16,6 +18,8 @@ import { optionalRandomValueGivenArray } from "./_internal/optionalRandomValueGi
 import { valueGivenArray } from "./_internal/valueGivenArray";
 
 export class ArrayUtil {
+  static arrayGivenArrayLike = arrayGivenArrayLike;
+  static arrayGivenPattern = arrayGivenPattern;
   static arrayIsEmptyOrNull = arrayIsEmptyOrNull;
   static arrayWithEqualSizeGroups = arrayWithEqualSizeGroups;
   static arrayWithLeftShift = arrayWithLeftShift;
