@@ -1,6 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ArrayUtil = void 0;
+const arrayGivenArrayLike_1 = require("./_internal/arrayGivenArrayLike");
+const arrayGivenPattern_1 = require("./_internal/arrayGivenPattern");
 const arrayIsEmptyOrNull_1 = require("./_internal/arrayIsEmptyOrNull");
 const arrayWithEqualSizeGroups_1 = require("./_internal/arrayWithEqualSizeGroups");
 const arrayWithLeftShift_1 = require("./_internal/arrayWithLeftShift");
@@ -20,6 +22,8 @@ const valueGivenArray_1 = require("./_internal/valueGivenArray");
 class ArrayUtil {
 }
 exports.ArrayUtil = ArrayUtil;
+ArrayUtil.arrayGivenArrayLike = arrayGivenArrayLike_1.arrayGivenArrayLike;
+ArrayUtil.arrayGivenPattern = arrayGivenPattern_1.arrayGivenPattern;
 ArrayUtil.arrayIsEmptyOrNull = arrayIsEmptyOrNull_1.arrayIsEmptyOrNull;
 ArrayUtil.arrayWithEqualSizeGroups = arrayWithEqualSizeGroups_1.arrayWithEqualSizeGroups;
 ArrayUtil.arrayWithLeftShift = arrayWithLeftShift_1.arrayWithLeftShift;
