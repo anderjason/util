@@ -3,6 +3,7 @@ import { arrayGivenPattern } from "./_internal/arrayGivenPattern";
 import { arrayIsEmptyOrNull } from "./_internal/arrayIsEmptyOrNull";
 import { arrayWithEqualSizeGroups } from "./_internal/arrayWithEqualSizeGroups";
 import { arrayWithLeftShift } from "./_internal/arrayWithLeftShift";
+import { arrayWithMovedValue } from "./_internal/arrayWithMovedValue";
 import { arrayWithOrderFromValue } from "./_internal/arrayWithOrderFromValue";
 import { arrayWithoutDuplicateValues } from "./_internal/arrayWithoutDuplicateValues";
 import { arrayWithoutValue } from "./_internal/arrayWithoutValue";
@@ -25,6 +26,7 @@ export declare class ArrayUtil {
     static arrayWithOrderFromValue: typeof arrayWithOrderFromValue;
     static arrayWithoutDuplicateValues: typeof arrayWithoutDuplicateValues;
     static arrayWithoutValue: typeof arrayWithoutValue;
+    static arrayWithMovedValue: typeof arrayWithMovedValue;
     static arrayWithPageSubset: typeof arrayWithPageSubset;
     static arrayWithReversedOrder: typeof arrayWithReversedOrder;
     static arrayWithRightShift: typeof arrayWithRightShift;
