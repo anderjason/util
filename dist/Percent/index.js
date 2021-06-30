@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Percent = void 0;
+const __1 = require("..");
 class Percent {
     constructor(value) {
         this._value = value;
@@ -26,10 +27,32 @@ class Percent {
         }
     }
     static givenFraction(numerator, denominator) {
+        if (numerator == null || isNaN(numerator)) {
+            throw new Error("Numerator is required");
+        }
+        if (denominator == null || isNaN(denominator)) {
+            throw new Error("Denominator is required");
+        }
         if (denominator == 0) {
             throw new Error("Denominator must not be 0");
         }
         return new Percent(numerator / denominator);
+    }
+    static givenPositionBetween(position, lowerBound, upperBound) {
+        if (position == null || isNaN(position)) {
+            throw new Error("Position is required");
+        }
+        if (lowerBound == null || isNaN(lowerBound)) {
+            throw new Error("Lower bound is required");
+        }
+        if (upperBound == null || isNaN(upperBound)) {
+            throw new Error("Upper bound is required");
+        }
+        if (lowerBound >= upperBound) {
+            throw new Error("Lower bound must be less than upper bound");
+        }
+        const result = __1.NumberUtil.numberWithHardLimit((position - lowerBound) / (upperBound - lowerBound), 0, 1);
+        return Percent.givenFraction(result, 1);
     }
     static ofZero() {
         return this._zero;

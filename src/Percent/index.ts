@@ -1,3 +1,5 @@
+import { NumberUtil } from "..";
+
 export class Percent {
   private static _zero = new Percent(0);
   private static _half = new Percent(0.5);
@@ -28,11 +30,40 @@ export class Percent {
   }
 
   static givenFraction(numerator: number, denominator: number): Percent {
+    if (numerator == null || isNaN(numerator)) {
+      throw new Error("Numerator is required");
+    }
+
+    if (denominator == null || isNaN(denominator)) {
+      throw new Error("Denominator is required");
+    }
+
     if (denominator == 0) {
       throw new Error("Denominator must not be 0");
     }
 
     return new Percent(numerator / denominator);
+  }
+
+  static givenPositionBetween(position: number, lowerBound: number, upperBound: number): Percent {
+    if (position == null || isNaN(position)) {
+      throw new Error("Position is required");
+    }
+
+    if (lowerBound == null || isNaN(lowerBound)) {
+      throw new Error("Lower bound is required");
+    }
+
+    if (upperBound == null || isNaN(upperBound)) {
+      throw new Error("Upper bound is required");
+    }
+
+    if (lowerBound >= upperBound) {
+      throw new Error("Lower bound must be less than upper bound");
+    }
+
+    const result = NumberUtil.numberWithHardLimit((position - lowerBound) / (upperBound - lowerBound), 0, 1);
+    return Percent.givenFraction(result, 1);
   }
 
   static ofZero(): Percent {

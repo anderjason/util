@@ -5,6 +5,7 @@ export declare class Percent {
     static isEqual(a: Percent, b: Percent): boolean;
     static givenString(value: string): Percent;
     static givenFraction(numerator: number, denominator: number): Percent;
+    static givenPositionBetween(position: number, lowerBound: number, upperBound: number): Percent;
     static ofZero(): Percent;
     static ofHalf(): Percent;
     static ofFull(): Percent;

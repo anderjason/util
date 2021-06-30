@@ -9,3 +9,50 @@ Test.define("Percent can calculate its inverse", () => {
 
   Test.assert(actual.isEqual(expected));
 });
+
+Test.define("Percent can be created with inverse lerp", () => {
+  const v = 75;
+  const a = 50;
+  const b = 100;
+
+  const expected = Percent.givenFraction(0.5, 1);
+  const actual = Percent.givenPositionBetween(v, a, b);
+
+  Test.assert(expected.isEqual(actual));
+})
+
+Test.define("Percent can be created with inverse lerp above upper bound", () => {
+  const v = 125;
+  const a = 50;
+  const b = 100;
+
+  const expected = Percent.givenFraction(1, 1);
+  const actual = Percent.givenPositionBetween(v, a, b);
+
+  Test.assert(expected.isEqual(actual));
+})
+
+Test.define("Percent can be created with inverse lerp below lower bound", () => {
+  const v = 25;
+  const a = 50;
+  const b = 100;
+
+  const expected = Percent.ofZero()
+  const actual = Percent.givenPositionBetween(v, a, b);
+
+  Test.assert(expected.isEqual(actual));
+})
+
+Test.define("Percent inverse lerp checks input bounds", () => {
+  Test.assertThrows(() => {
+    Percent.givenPositionBetween(0, 10, 5);
+  });
+
+  Test.assertThrows(() => {
+    Percent.givenPositionBetween(0, 10, 10);
+  });
+});
+
+Test.assertThrows(() => {
+  Percent.givenPositionBetween(undefined, undefined, undefined);
+});
