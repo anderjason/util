@@ -22,30 +22,40 @@ export function arrayWithOrderFromValue<T, TV>(
       const valueA = getSortableValue(a);
       const valueB = getSortableValue(b);
 
-      if (valueA < valueB) {
+      if (valueA == null && valueB == null) {
+        return 0;
+      }
+
+      if (valueA == null) {
         return 1;
       }
 
-      if (valueA > valueB) {
+      if (valueB == null) {
         return -1;
       }
 
-      return 0;
+      const result = String(valueA).localeCompare(String(valueB), undefined, { numeric: true });
+      return result * -1;
     });
   } else {
     result.sort((a, b) => {
       const valueA = getSortableValue(a);
       const valueB = getSortableValue(b);
 
-      if (valueA < valueB) {
+      if (valueA == null && valueB == null) {
+        return 0;
+      }
+
+      if (valueA == null) {
         return -1;
       }
 
-      if (valueA > valueB) {
+      if (valueB == null) {
         return 1;
       }
 
-      return 0;
+      const result = String(valueA).localeCompare(String(valueB), undefined, { numeric: true });
+      return result;
     });
   }
 
