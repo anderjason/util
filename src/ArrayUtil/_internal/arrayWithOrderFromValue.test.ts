@@ -64,6 +64,7 @@ Test.define("arrayWithOrderFromValue can handle undefined", () => {
   );
 
   const playerNames = result.map(r => r.player);
+  console.log(playerNames);
   Test.assertIsDeepEqual(playerNames, ["fifth", "fourth", "third", "first", "second"]);
 
   const result2 = arrayWithOrderFromValue(
