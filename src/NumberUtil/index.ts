@@ -6,6 +6,7 @@ import { numberWithDecimalPlaceLimit } from "./_internal/numberWithDecimalPlaceL
 import { numberWithEasing } from "./_internal/numberWithEasing";
 import { numberWithHardLimit } from "./_internal/numberWithHardLimit";
 import { numberWithRangeMap } from "./_internal/numberWithRangeMap";
+import { randomNumberGivenInput } from "./_internal/randomNumberGivenInput";
 import { randomNumberGivenRange } from "./_internal/randomNumberGivenRange";
 
 export class NumberUtil {

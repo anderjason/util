@@ -3,10 +3,12 @@ import { stringIsEmpty } from "./_internal/stringIsEmpty";
 import { stringWithCase } from "./_internal/stringWithCase";
 import { stringWithEachMatchReplaced } from "./_internal/stringWithEachMatchReplaced";
 import { stringWithReplacedTokens } from "./_internal/stringWithReplacedTokens";
+import { hashCodeGivenString } from "./_internal/hashCodeGivenString";
 export declare class StringUtil {
     static stringIsEmpty: typeof stringIsEmpty;
     static stringOfRandomCharacters: typeof stringOfRandomCharacters;
     static stringWithCase: typeof stringWithCase;
     static stringWithEachMatchReplaced: typeof stringWithEachMatchReplaced;
     static stringWithReplacedTokens: typeof stringWithReplacedTokens;
+    static hashCodeGivenString: typeof hashCodeGivenString;
 }

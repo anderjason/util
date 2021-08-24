@@ -8,3 +8,4 @@ import "./_internal/stringWithKebabCase.test";
 import "./_internal/stringWithPascalCase.test";
 import "./_internal/stringWithSnakeCase.test";
 import "./_internal/stringWithSpaceCase.test";
+import "./_internal/hashCodeGivenString.test";

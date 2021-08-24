@@ -6,6 +6,7 @@ const stringIsEmpty_1 = require("./_internal/stringIsEmpty");
 const stringWithCase_1 = require("./_internal/stringWithCase");
 const stringWithEachMatchReplaced_1 = require("./_internal/stringWithEachMatchReplaced");
 const stringWithReplacedTokens_1 = require("./_internal/stringWithReplacedTokens");
+const hashCodeGivenString_1 = require("./_internal/hashCodeGivenString");
 class StringUtil {
 }
 exports.StringUtil = StringUtil;
@@ -14,4 +15,5 @@ StringUtil.stringOfRandomCharacters = stringOfRandomCharacters_1.stringOfRandomC
 StringUtil.stringWithCase = stringWithCase_1.stringWithCase;
 StringUtil.stringWithEachMatchReplaced = stringWithEachMatchReplaced_1.stringWithEachMatchReplaced;
 StringUtil.stringWithReplacedTokens = stringWithReplacedTokens_1.stringWithReplacedTokens;
+StringUtil.hashCodeGivenString = hashCodeGivenString_1.hashCodeGivenString;
 //# sourceMappingURL=index.js.map
