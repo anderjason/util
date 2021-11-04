@@ -1,6 +1,7 @@
 import { arrayGivenArrayLike } from "./_internal/arrayGivenArrayLike";
 import { arrayGivenPattern } from "./_internal/arrayGivenPattern";
 import { arrayIsEmptyOrNull } from "./_internal/arrayIsEmptyOrNull";
+import { arrayIsEqual } from "./_internal/arrayIsEqual";
 import { arrayWithEqualSizeGroups } from "./_internal/arrayWithEqualSizeGroups";
 import { arrayWithLeftShift } from "./_internal/arrayWithLeftShift";
 import { arrayWithMovedValue } from "./_internal/arrayWithMovedValue";
@@ -21,6 +22,7 @@ export declare class ArrayUtil {
     static arrayGivenArrayLike: typeof arrayGivenArrayLike;
     static arrayGivenPattern: typeof arrayGivenPattern;
     static arrayIsEmptyOrNull: typeof arrayIsEmptyOrNull;
+    static arrayIsEqual: typeof arrayIsEqual;
     static arrayWithEqualSizeGroups: typeof arrayWithEqualSizeGroups;
     static arrayWithLeftShift: typeof arrayWithLeftShift;
     static arrayWithOrderFromValue: typeof arrayWithOrderFromValue;
