@@ -6,7 +6,7 @@ function stringWithPascalCase(input) {
     if (input == null) {
         throw new Error("input is required");
     }
-    const camel = stringWithCamelCase_1.stringWithCamelCase(input);
+    const camel = (0, stringWithCamelCase_1.stringWithCamelCase)(input);
     return camel.charAt(0).toUpperCase() + camel.slice(1);
 }
 exports.stringWithPascalCase = stringWithPascalCase;

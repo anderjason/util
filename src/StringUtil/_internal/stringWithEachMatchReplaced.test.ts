@@ -3,7 +3,7 @@ import { stringWithEachMatchReplaced } from "./stringWithEachMatchReplaced";
 
 Test.define(
   "stringWithEachMatchReplaced returns the expected results with a promise",
-  () => {
+  async () => {
     const before: string = [
       `const PromiseHelper_1 = req("../../../lib/PromiseHelper");`,
       `const StringHelper_1 = req("../../../lib/StringHelper");`,
@@ -20,17 +20,17 @@ Test.define(
       `const startLocalContainer_1 = TEST("./_INTERNAL/STARTLOCALCONTAINER");`,
     ].join("\n");
 
-    return stringWithEachMatchReplaced(before, regex, (match) => {
+    const actual = await stringWithEachMatchReplaced(before, regex, (match) => {
       return Promise.resolve(`TEST("${match[1].toUpperCase()}")`);
-    }).then((actual) => {
-      Test.assert(actual === expected);
-    });
+    })
+      
+    Test.assert(actual === expected, "Result should be correct");
   }
 );
 
 Test.define(
   "stringWithEachMatchReplaced returns the expected results with a sync value",
-  () => {
+  async () => {
     const before: string = [
       `const PromiseHelper_1 = req("../../../lib/PromiseHelper");`,
       `const StringHelper_1 = req("../../../lib/StringHelper");`,
@@ -47,10 +47,10 @@ Test.define(
       `const startLocalContainer_1 = TEST("./_INTERNAL/STARTLOCALCONTAINER");`,
     ].join("\n");
 
-    return stringWithEachMatchReplaced(before, regex, (match) => {
+    const actual = await stringWithEachMatchReplaced(before, regex, (match) => {
       return `TEST("${match[1].toUpperCase()}")`;
-    }).then((actual) => {
-      Test.assert(actual === expected);
     });
+
+    Test.assert(actual === expected, "Result should be correct");
   }
 );

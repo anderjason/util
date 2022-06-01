@@ -27,6 +27,6 @@ Test.define("stringWithCamelCase returns the expected results", () => {
       console.log(`${idx} - Actual: '${actual}', expected: '${expected}'`);
     }
 
-    Test.assert(actual === expected);
+    Test.assert(actual === expected, `${idx} - Actual: '${actual}', expected: '${expected}'`);
   });
 });

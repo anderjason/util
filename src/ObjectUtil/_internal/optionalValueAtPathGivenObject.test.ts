@@ -20,7 +20,7 @@ Test.define(
     );
     const expected = "red";
 
-    Test.assertIsEqual(actual, expected);
+    Test.assertIsEqual(actual, expected, "Actual should be equal to expected");
   }
 );
 
@@ -41,6 +41,6 @@ Test.define(
       ValuePath.givenParts([])
     );
 
-    Test.assertIsDeepEqual(actual, original);
+    Test.assertIsDeepEqual(actual, original, "Actual should be equal to expected");
   }
 );

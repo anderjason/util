@@ -11,8 +11,11 @@ Test.define(
     const items = [first, second, third];
     const result = optionalRandomValueGivenArray(items);
 
-    Test.assert(result != null);
-    Test.assert(result === first || result === second || result === third);
+    Test.assert(result != null, "Result should not be null");
+    Test.assert(
+      result === first || result === second || result === third,
+      "Result should be one of the items"
+    );
   }
 );
 
@@ -22,6 +25,6 @@ Test.define(
     const items: any[] = [];
     const result = optionalRandomValueGivenArray(items);
 
-    Test.assert(typeof result === "undefined");
+    Test.assert(typeof result === "undefined", "Result should be undefined");
   }
 );

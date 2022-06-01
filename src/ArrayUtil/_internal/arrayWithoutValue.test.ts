@@ -12,10 +12,10 @@ Test.define(
 
     const result = arrayWithoutValue(items, third);
 
-    Test.assert(result.length === 3);
-    Test.assert(result[0] === first);
-    Test.assert(result[1] === second);
-    Test.assert(result[2] === fourth);
+    Test.assert(result.length === 3, "Result should have 3 items");
+    Test.assert(result[0] === first, "Result 1 should be correct");
+    Test.assert(result[1] === second, "Result 2 should be correct");
+    Test.assert(result[2] === fourth, "Result 3 should be correct");
   }
 );
 
@@ -29,8 +29,8 @@ Test.define(
 
     const result = arrayWithoutValue(items, third);
 
-    Test.assert(result !== items);
-    Test.assert(result.length === 2);
+    Test.assert(result !== items, "Result should be a new array");
+    Test.assert(result.length === 2, "Result should have 2 items");
   }
 );
 
@@ -42,7 +42,7 @@ Test.define("arrayWithoutValue removes all instances of the item", () => {
 
   const result = arrayWithoutValue(items, third);
 
-  Test.assert(result.length === 2);
-  Test.assert(result[0] === first);
-  Test.assert(result[1] === second);
+  Test.assert(result.length === 2, "Result should have 2 items");
+  Test.assert(result[0] === first, "Result 1 should be correct");
+  Test.assert(result[1] === second, "Result 2 should be correct");
 });

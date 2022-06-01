@@ -9,6 +9,7 @@ import { arrayWithOrderFromValue } from "./_internal/arrayWithOrderFromValue";
 import { arrayWithoutDuplicateValues } from "./_internal/arrayWithoutDuplicateValues";
 import { arrayWithoutValue } from "./_internal/arrayWithoutValue";
 import { arrayWithPageSubset } from "./_internal/arrayWithPageSubset";
+import { arrayWithRandomOrder } from "./_internal/arrayWithRandomOrder";
 import { arrayWithReversedOrder } from "./_internal/arrayWithReversedOrder";
 import { arrayWithRightShift } from "./_internal/arrayWithRightShift";
 import { arrayWithValue } from "./_internal/arrayWithValue";
@@ -26,16 +27,18 @@ export class ArrayUtil {
   static arrayIsEqual = arrayIsEqual;
   static arrayWithEqualSizeGroups = arrayWithEqualSizeGroups;
   static arrayWithLeftShift = arrayWithLeftShift;
+  static arrayWithMovedValue = arrayWithMovedValue;
   static arrayWithOrderFromValue = arrayWithOrderFromValue;
   static arrayWithoutDuplicateValues = arrayWithoutDuplicateValues;
   static arrayWithoutValue = arrayWithoutValue;
-  static arrayWithMovedValue = arrayWithMovedValue;
   static arrayWithPageSubset = arrayWithPageSubset;
+  static arrayWithRandomOrder = arrayWithRandomOrder;
   static arrayWithReversedOrder = arrayWithReversedOrder;
   static arrayWithRightShift = arrayWithRightShift;
   static arrayWithValue = arrayWithValue;
   static numberArrayGivenRange = numberArrayGivenRange;
-  static optionalIndexOfFirstMatchGivenArray = optionalIndexOfFirstMatchGivenArray;
+  static optionalIndexOfFirstMatchGivenArray =
+    optionalIndexOfFirstMatchGivenArray;
   static optionalLastValueGivenArray = optionalLastValueGivenArray;
   static optionalNthValueGivenArray = optionalNthValueGivenArray;
   static optionalRandomValueGivenArray = optionalRandomValueGivenArray;

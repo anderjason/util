@@ -19,6 +19,7 @@ Test.define(
       ValuePath.givenString("design.colors.background"),
       "green"
     );
+
     const expected = {
       design: {
         colors: {
@@ -28,7 +29,7 @@ Test.define(
       },
     };
 
-    Test.assertIsDeepEqual(actual, expected);
+    Test.assertIsDeepEqual(actual, expected, "Actual should be deep equal to expected");
   }
 );
 
@@ -51,6 +52,6 @@ Test.define(
       message: "hello world",
     };
 
-    Test.assertIsDeepEqual(actual, expected);
+    Test.assertIsDeepEqual(actual, expected, "Actual should be deep equal to expected");
   }
 );

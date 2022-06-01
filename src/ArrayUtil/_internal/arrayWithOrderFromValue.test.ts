@@ -16,9 +16,9 @@ Test.define(
       "ascending"
     );
 
-    Test.assert(result[0].player === "first");
-    Test.assert(result[1].player === "second");
-    Test.assert(result[2].player === "third");
+    Test.assert(result[0].player === "first", "Result 1 should be correct");
+    Test.assert(result[1].player === "second", "Result 2 should be correct");
+    Test.assert(result[2].player === "third", "Result 3 should be correct");
   }
 );
 
@@ -35,17 +35,17 @@ Test.define("arrayWithOrderFromValue can return descending results", () => {
     "descending"
   );
 
-  Test.assert(result[0].player === "third");
-  Test.assert(result[1].player === "second");
-  Test.assert(result[2].player === "first");
+  Test.assert(result[0].player === "third", "Result 1 should be correct");
+  Test.assert(result[1].player === "second", "Result 2 should be correct");
+  Test.assert(result[2].player === "first", "Result 3 should be correct");
 });
 
 Test.define("arrayWithOrderFromValue handles an empty array", () => {
   const input: any[] = [];
   const result = arrayWithOrderFromValue(input, (x) => 1, "ascending");
 
-  Test.assert(result != null);
-  Test.assert(result.length === 0);
+  Test.assert(result != null, "Result should not be null");
+  Test.assert(result.length === 0, "Result should be empty");
 });
 
 Test.define("arrayWithOrderFromValue can handle undefined", () => {
@@ -63,8 +63,12 @@ Test.define("arrayWithOrderFromValue can handle undefined", () => {
     "descending"
   );
 
-  const playerNames = result.map(r => r.player);
-  Test.assertIsDeepEqual(playerNames, ["fifth", "fourth", "third", "first", "second"]);
+  const playerNames = result.map((r) => r.player);
+  Test.assertIsDeepEqual(
+    playerNames,
+    ["fifth", "fourth", "third", "first", "second"],
+    "Result 1 should be correct"
+  );
 
   const result2 = arrayWithOrderFromValue(
     input,
@@ -72,8 +76,12 @@ Test.define("arrayWithOrderFromValue can handle undefined", () => {
     "ascending"
   );
 
-  const playerNames2 = result2.map(r => r.player);
-  Test.assertIsDeepEqual(playerNames2, ["second", "first", "third", "fourth", "fifth"]);
+  const playerNames2 = result2.map((r) => r.player);
+  Test.assertIsDeepEqual(
+    playerNames2,
+    ["second", "first", "third", "fourth", "fifth"],
+    "Result 2 should be correct"
+  );
 });
 
 Test.define("arrayWithOrderFromValue can handle natural sorting", () => {
@@ -96,8 +104,23 @@ Test.define("arrayWithOrderFromValue can handle natural sorting", () => {
     "ascending"
   );
 
-  const names = result.map(r => r.name);
-  Test.assertIsDeepEqual(names, ["alice1", "alice2", "alice3", "alice10", "alice15", "alice100", "bob1", "bob2", "bob12", "bob100"]);
+  const names = result.map((r) => r.name);
+  Test.assertIsDeepEqual(
+    names,
+    [
+      "alice1",
+      "alice2",
+      "alice3",
+      "alice10",
+      "alice15",
+      "alice100",
+      "bob1",
+      "bob2",
+      "bob12",
+      "bob100",
+    ],
+    "Result 1 should be correct"
+  );
 
   const result2 = arrayWithOrderFromValue(
     input,
@@ -105,6 +128,21 @@ Test.define("arrayWithOrderFromValue can handle natural sorting", () => {
     "descending"
   );
 
-  const names2 = result2.map(r => r.name);
-  Test.assertIsDeepEqual(names2, ["bob100", "bob12", "bob2", "bob1", "alice100", "alice15", "alice10", "alice3", "alice2", "alice1"]);
+  const names2 = result2.map((r) => r.name);
+  Test.assertIsDeepEqual(
+    names2,
+    [
+      "bob100",
+      "bob12",
+      "bob2",
+      "bob1",
+      "alice100",
+      "alice15",
+      "alice10",
+      "alice3",
+      "alice2",
+      "alice1",
+    ],
+    "Result 2 should be correct"
+  );
 });

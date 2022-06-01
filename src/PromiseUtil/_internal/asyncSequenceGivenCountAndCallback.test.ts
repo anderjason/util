@@ -11,6 +11,6 @@ Test.define(
       result.push(v * 2);
     });
 
-    Test.assert(result.join(",") === "2,4,6");
+    Test.assert(result.join(",") === "2,4,6", "Result should be correct");
   }
 );

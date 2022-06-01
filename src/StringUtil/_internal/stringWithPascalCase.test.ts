@@ -18,10 +18,10 @@ Test.define("stringWithPascalCase returns the expected results", () => {
     ["hello - world", "HelloWorld"],
   ];
 
-  beforeAfter.forEach((pair) => {
+  beforeAfter.forEach((pair, idx) => {
     const actual = stringWithPascalCase(pair[0]);
     const expected = pair[1];
 
-    Test.assert(actual === expected);
+    Test.assert(actual === expected, `${idx} - Actual: '${actual}', expected: '${expected}'`);
   });
 });

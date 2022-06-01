@@ -22,6 +22,6 @@ Test.define("objectWithDeepMerge returns the expected result", () => {
   const copy = objectWithDeepMerge({}, original);
   colors.other = "green";
 
-  Test.assert(copy.design.options[0].settings.colors.background === "red");
-  Test.assert(copy.design.options[0].settings.colors.other == null);
+  Test.assert(copy.design.options[0].settings.colors.background === "red", "Background should be red");
+  Test.assert(copy.design.options[0].settings.colors.other == null, "Other should be null");
 });

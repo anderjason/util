@@ -6,7 +6,7 @@ function stringWithSpaceCase(input) {
     if (input == null) {
         throw new Error("input is required");
     }
-    return stringWithNoCase_1.stringWithNoCase(input)
+    return (0, stringWithNoCase_1.stringWithNoCase)(input)
         .replace(/[\W_]+(.|$)/g, (matches, match) => {
         return match ? " " + match : "";
     })

@@ -11,10 +11,10 @@ Test.define("stringWithOnlyInitialCapital returns the expected results", () => {
     ["", ""],
   ];
 
-  beforeAfter.forEach((pair) => {
+  beforeAfter.forEach((pair, idx) => {
     const actual = stringWithOnlyInitialCapital(pair[0]);
     const expected = pair[1];
 
-    Test.assert(actual === expected);
+    Test.assert(actual === expected, `${idx} - Actual: '${actual}', expected: '${expected}'`);
   });
 });

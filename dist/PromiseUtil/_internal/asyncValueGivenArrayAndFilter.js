@@ -11,7 +11,7 @@ const asyncSequenceGivenArrayAndCallback_1 = require("./asyncSequenceGivenArrayA
  */
 async function asyncValueGivenArrayAndFilter(input, fn) {
     let result = undefined;
-    await asyncSequenceGivenArrayAndCallback_1.asyncSequenceGivenArrayAndCallback(input, (element) => {
+    await (0, asyncSequenceGivenArrayAndCallback_1.asyncSequenceGivenArrayAndCallback)(input, (element) => {
         return fn(element).then((isMatch) => {
             if (isMatch == true && result == null) {
                 result = element;

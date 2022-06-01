@@ -23,7 +23,7 @@ function objectWithValueAtPath(object, valuePath, value) {
         result = [...object];
     }
     else {
-        result = Object.assign({}, object);
+        result = { ...object };
     }
     // mutate the clone
     let pointer = result;
@@ -33,7 +33,7 @@ function objectWithValueAtPath(object, valuePath, value) {
             pointer[key] = [...pointer[key]];
         }
         else {
-            pointer[key] = Object.assign({}, pointer[key]);
+            pointer[key] = { ...pointer[key] };
         }
         pointer = pointer[key];
         index += 1;

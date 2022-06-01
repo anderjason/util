@@ -11,7 +11,7 @@ const asyncSequenceGivenArrayAndCallback_1 = require("./asyncSequenceGivenArrayA
  */
 function asyncValuesGivenArrayAndConverter(input, fn) {
     const result = [];
-    return asyncSequenceGivenArrayAndCallback_1.asyncSequenceGivenArrayAndCallback(input, (element, idx) => {
+    return (0, asyncSequenceGivenArrayAndCallback_1.asyncSequenceGivenArrayAndCallback)(input, (element, idx) => {
         return fn(element, idx).then((elementResult) => {
             result.push(elementResult);
         });

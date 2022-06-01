@@ -7,7 +7,7 @@ Test.define(
     const expected = 3259054761512980;
     const actual = hashCodeGivenString("hello world");
 
-    Test.assertIsEqual(actual, expected);
+    Test.assertIsEqual(actual, expected, "Result should be correct");
   }
 );
 
@@ -17,7 +17,7 @@ Test.define(
     const expected = 2029131704025977;
     const actual = hashCodeGivenString("abcdef");
 
-    Test.assertIsEqual(actual, expected);
+    Test.assertIsEqual(actual, expected, "Result should be correct");
   }
 );
 
@@ -27,7 +27,7 @@ Test.define(
     const a = hashCodeGivenString("abcdef");
     const b = hashCodeGivenString("abcdef");
     
-    Test.assertIsEqual(a, b);
+    Test.assertIsEqual(a, b, "Result should be correct");
   }
 );
 
@@ -37,7 +37,7 @@ Test.define(
     const a = hashCodeGivenString("abcdef", 1);
     const b = hashCodeGivenString("abcdef", 2);
     
-    Test.assert(a !== b);
+    Test.assert(a !== b, "Result should be correct");
   }
 );
 
@@ -48,7 +48,7 @@ Test.define(
     const a = hashCodeGivenString("abcdef");
     const b = hashCodeGivenString("abcde");
     
-    Test.assert(a !== b);
+    Test.assert(a !== b, "Result should be correct");
   }
 );
 
@@ -58,7 +58,7 @@ Test.define(
     const expected = 3338908027751811;
     const actual = hashCodeGivenString("");
 
-    Test.assertIsEqual(actual, expected);
+    Test.assertIsEqual(actual, expected, "Result should be correct");
   }
 );
 
@@ -67,10 +67,10 @@ Test.define(
   () => {  
     Test.assertThrows(() => {
       hashCodeGivenString(null);
-    })
+    }, "Should throw when passed null");
     
     Test.assertThrows(() => {
       hashCodeGivenString(undefined);
-    })
+    }, "Should throw when passed undefined");
   }
 );

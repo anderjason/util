@@ -7,7 +7,7 @@ Test.define(
     const expected = 127.13819111231714;
     const actual = randomNumberGivenRange(100, 200, 12345);
 
-    Test.assertIsEqual(actual, expected);
+    Test.assertIsEqual(actual, expected, "Result should be correct");
   }
 );
 
@@ -17,7 +17,7 @@ Test.define(
     const expected = 154.30810952093452;
     const actual = randomNumberGivenRange(100, 200, 12344);
 
-    Test.assertIsEqual(actual, expected);
+    Test.assertIsEqual(actual, expected, "Result should be correct");
   }
 );
 
@@ -27,7 +27,7 @@ Test.define(
     const a = randomNumberGivenRange(100, 200, 12345);
     const b = randomNumberGivenRange(100, 200, 12345);
     
-    Test.assertIsEqual(a, b);
+    Test.assertIsEqual(a, b, "Result should be correct");
   }
 );
 
@@ -37,6 +37,6 @@ Test.define(
     const a = randomNumberGivenRange(100, 200);
     const b = randomNumberGivenRange(100, 200);
     
-    Test.assert(a !== b);
+    Test.assert(a !== b, "Result should be correct");
   }
 );

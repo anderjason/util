@@ -21,10 +21,6 @@ Test.define("stringWithSpaceCase returns the expected results", () => {
     const actual = stringWithSpaceCase(pair[0]);
     const expected = pair[1];
 
-    if (actual !== expected) {
-      console.log(`${idx} - Actual: '${actual}', expected: '${expected}'`);
-    }
-
-    Test.assert(actual === expected);
+    Test.assert(actual === expected, `${idx} - Actual: '${actual}', expected: '${expected}'`);
   });
 });

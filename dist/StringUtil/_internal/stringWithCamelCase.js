@@ -6,7 +6,7 @@ function stringWithCamelCase(input) {
     if (input == null) {
         throw new Error("input is required");
     }
-    return stringWithSpaceCase_1.stringWithSpaceCase(input).replace(/\s(\w)/g, (matches, letter) => {
+    return (0, stringWithSpaceCase_1.stringWithSpaceCase)(input).replace(/\s(\w)/g, (matches, letter) => {
         return letter.toUpperCase();
     });
 }

@@ -14,6 +14,6 @@ Test.define("stringWithInitialCapital returns the expected results", () => {
     const actual = stringWithInitialCapital(pair[0]);
     const expected = pair[1];
 
-    Test.assert(actual === expected);
+    Test.assert(actual === expected, "Result should be correct");
   });
 });

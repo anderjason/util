@@ -6,8 +6,8 @@ Test.define(
   () => {
     const input = 5;
 
-    Test.assert(numberWithRangeMap(input, 0, 10, 0, 100) === 50);
-    Test.assert(numberWithRangeMap(input, 0, 5, 0, 100) === 100);
+    Test.assert(numberWithRangeMap(input, 0, 10, 0, 100) === 50, "Result 1 should be correct");
+    Test.assert(numberWithRangeMap(input, 0, 5, 0, 100) === 100, "Result 2 should be correct");
   }
 );
 
@@ -16,7 +16,7 @@ Test.define(
   () => {
     const input = 5;
 
-    Test.assert(numberWithRangeMap(input, 0, 1, 0, 100) === 100);
-    Test.assert(numberWithRangeMap(input, 10, 100, 0, 100) === 0);
+    Test.assert(numberWithRangeMap(input, 0, 1, 0, 100) === 100, "Result 1 should be correct");
+    Test.assert(numberWithRangeMap(input, 10, 100, 0, 100) === 0, "Result 2 should be correct");
   }
 );
