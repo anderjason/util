@@ -6,4 +6,4 @@
  *
  * @remarks This operation does not modify the input array.
  */
-export declare function arrayWithMovedValue<T>(input: T[], oldIndex: number, newIndex: number): T[];
+export declare function arrayWithMovedValue<T>(input: T[] | null | undefined, oldIndex: number, newIndex: number): T[];

@@ -6,7 +6,7 @@
  * @returns The index of the first value for which the callback return true, or undefined.
  */
 export function optionalIndexOfFirstMatchGivenArray<T>(
-  array: T[],
+  array: T[] | null | undefined,
   isMatch: (value: T) => boolean
 ): number | undefined {
   if (array == null) {

@@ -6,7 +6,11 @@
  * @param fn - A function that compares two items and returns true if they are equal.
  * @returns True if all of the items are equal, false otherwise.
  */
-export function arrayIsEqual<T>(inputA: T[], inputB: T[], fn: (a: T, b: T) => boolean): boolean {
+export function arrayIsEqual<T>(
+  inputA: T[] | undefined | null,
+  inputB: T[] | undefined | null,
+  fn: (a: T, b: T) => boolean
+): boolean {
   if (inputA == null && inputB == null) {
     return true;
   }

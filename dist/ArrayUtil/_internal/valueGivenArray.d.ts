@@ -4,4 +4,4 @@
  * @param input - An array
  * @returns The first value in the array
  */
-export declare function valueGivenArray<T>(array: T[]): T;
+export declare function valueGivenArray<T>(array?: T[]): T;

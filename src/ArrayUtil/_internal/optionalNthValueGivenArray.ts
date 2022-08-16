@@ -6,7 +6,7 @@
  * @returns The value at the specified position, or undefined
  */
 export function optionalNthValueGivenArray<T>(
-  array: T[],
+  array: T[] | undefined | null,
   n: number
 ): T | undefined {
   if (array == null) {

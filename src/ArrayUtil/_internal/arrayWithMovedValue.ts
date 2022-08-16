@@ -7,7 +7,7 @@
  * @remarks This operation does not modify the input array.
  */
 export function arrayWithMovedValue<T>(
-  input: T[],
+  input: T[] | null | undefined,
   oldIndex: number,
   newIndex: number
 ): T[] {

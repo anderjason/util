@@ -4,7 +4,7 @@
  * @param input - An array
  * @returns The first value in the array
  */
-export function valueGivenArray<T>(array: T[]): T {
+export function valueGivenArray<T>(array?: T[]): T {
   if (array == null) {
     throw new Error("array is required");
   }
