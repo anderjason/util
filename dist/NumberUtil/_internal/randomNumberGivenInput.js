@@ -4,7 +4,7 @@
 // https://github.com/nquinlan/better-random-numbers-for-javascript-mirror
 // Original work is under MIT license -
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.randomNumberGivenInput = void 0;
+exports.randomNumberSequenceGivenInput = exports.randomNumberGivenInput = void 0;
 // Copyright (C) 2010 by Johannes Baagøe <baagoe@baagoe.org>
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -42,16 +42,15 @@ class Mash {
         }
         return (this._n >>> 0) * 2.3283064365386963e-10; // 2^-32
     }
-    ;
 }
 class Alea {
     constructor(seed) {
         const mash = new Mash();
         // Apply the seeding algorithm from Baagoe.
         this.c = 1;
-        this.s0 = mash.next(' ');
-        this.s1 = mash.next(' ');
-        this.s2 = mash.next(' ');
+        this.s0 = mash.next(" ");
+        this.s1 = mash.next(" ");
+        this.s2 = mash.next(" ");
         this.s0 -= mash.next(seed);
         if (this.s0 < 0) {
             this.s0 += 1;
@@ -69,9 +68,8 @@ class Alea {
         const t = 2091639 * this.s0 + this.c * 2.3283064365386963e-10; // 2^-32
         this.s0 = this.s1;
         this.s1 = this.s2;
-        return this.s2 = t - (this.c = t | 0);
+        return (this.s2 = t - (this.c = t | 0));
     }
-    ;
 }
 function randomNumberGivenInput(seed) {
     if (seed == null) {
@@ -80,4 +78,14 @@ function randomNumberGivenInput(seed) {
     return new Alea(seed).next();
 }
 exports.randomNumberGivenInput = randomNumberGivenInput;
+function* randomNumberSequenceGivenInput(seed) {
+    if (seed == null) {
+        throw new Error("Seed is required");
+    }
+    const alea = new Alea(seed);
+    while (true) {
+        yield alea.next();
+    }
+}
+exports.randomNumberSequenceGivenInput = randomNumberSequenceGivenInput;
 //# sourceMappingURL=randomNumberGivenInput.js.map

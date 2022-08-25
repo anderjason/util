@@ -39,7 +39,7 @@ class Mash {
       this._n += h * 0x100000000; // 2^32
     }
     return (this._n >>> 0) * 2.3283064365386963e-10; // 2^-32
-  };
+  }
 }
 
 class Alea {
@@ -50,23 +50,23 @@ class Alea {
 
   constructor(seed: number) {
     const mash = new Mash();
-    
+
     // Apply the seeding algorithm from Baagoe.
     this.c = 1;
-    this.s0 = mash.next(' ');
-    this.s1 = mash.next(' ');
-    this.s2 = mash.next(' ');
-    
+    this.s0 = mash.next(" ");
+    this.s1 = mash.next(" ");
+    this.s2 = mash.next(" ");
+
     this.s0 -= mash.next(seed);
-    if (this.s0 < 0) { 
+    if (this.s0 < 0) {
       this.s0 += 1;
     }
-    
+
     this.s1 -= mash.next(seed);
     if (this.s1 < 0) {
-      this.s1 += 1; 
+      this.s1 += 1;
     }
-    
+
     this.s2 -= mash.next(seed);
     if (this.s2 < 0) {
       this.s2 += 1;
@@ -77,14 +77,27 @@ class Alea {
     const t = 2091639 * this.s0 + this.c * 2.3283064365386963e-10; // 2^-32
     this.s0 = this.s1;
     this.s1 = this.s2;
-    return this.s2 = t - (this.c = t | 0);
-  };
+    return (this.s2 = t - (this.c = t | 0));
+  }
 }
 
 export function randomNumberGivenInput(seed: number): number {
   if (seed == null) {
     throw new Error("Seed is required");
   }
-  
+
   return new Alea(seed).next();
+}
+
+export function* randomNumberSequenceGivenInput(
+  seed: number
+): Generator<number> {
+  if (seed == null) {
+    throw new Error("Seed is required");
+  }
+
+  const alea = new Alea(seed);
+  while (true) {
+    yield alea.next();
+  }
 }
