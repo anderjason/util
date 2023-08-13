@@ -45,7 +45,11 @@ export class Percent {
     return new Percent(numerator / denominator);
   }
 
-  static givenPositionBetween(position: number, lowerBound: number, upperBound: number): Percent {
+  static givenPositionBetween(
+    position: number,
+    lowerBound: number,
+    upperBound: number
+  ): Percent {
     if (position == null || isNaN(position)) {
       throw new Error("Position is required");
     }
@@ -58,11 +62,19 @@ export class Percent {
       throw new Error("Upper bound is required");
     }
 
+    if (lowerBound === upperBound && lowerBound === position) {
+      return Percent.ofFull();
+    }
+
     if (lowerBound >= upperBound) {
       throw new Error("Lower bound must be less than upper bound");
     }
 
-    const result = NumberUtil.numberWithHardLimit((position - lowerBound) / (upperBound - lowerBound), 0, 1);
+    const result = NumberUtil.numberWithHardLimit(
+      (position - lowerBound) / (upperBound - lowerBound),
+      0,
+      1
+    );
     return Percent.givenFraction(result, 1);
   }
 
