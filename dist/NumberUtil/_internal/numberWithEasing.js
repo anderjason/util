@@ -29,7 +29,7 @@ function bounceOut(x) {
     }
 }
 function numberWithEasing(input, type) {
-    const x = (0, numberWithHardLimit_1.numberWithHardLimit)(input, 0, 1);
+    const x = numberWithHardLimit_1.numberWithHardLimit(input, 0, 1);
     switch (type) {
         case "linear":
             return x;

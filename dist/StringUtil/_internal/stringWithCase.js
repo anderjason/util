@@ -11,19 +11,19 @@ const stringWithSpaceCase_1 = require("./stringWithSpaceCase");
 function stringWithCase(input, stringCase) {
     switch (stringCase) {
         case "camelCase":
-            return (0, stringWithCamelCase_1.stringWithCamelCase)(input);
+            return stringWithCamelCase_1.stringWithCamelCase(input);
         case "Initial CaPiTaL":
-            return (0, stringWithInitialCapital_1.stringWithInitialCapital)(input);
+            return stringWithInitialCapital_1.stringWithInitialCapital(input);
         case "Only initial capital":
-            return (0, stringWithOnlyInitialCapital_1.stringWithOnlyInitialCapital)(input);
+            return stringWithOnlyInitialCapital_1.stringWithOnlyInitialCapital(input);
         case "kebab-case":
-            return (0, stringWithKebabCase_1.stringWithKebabCase)(input);
+            return stringWithKebabCase_1.stringWithKebabCase(input);
         case "PascalCase":
-            return (0, stringWithPascalCase_1.stringWithPascalCase)(input);
+            return stringWithPascalCase_1.stringWithPascalCase(input);
         case "snake_case":
-            return (0, stringWithSnakeCase_1.stringWithSnakeCase)(input);
+            return stringWithSnakeCase_1.stringWithSnakeCase(input);
         case "space case":
-            return (0, stringWithSpaceCase_1.stringWithSpaceCase)(input);
+            return stringWithSpaceCase_1.stringWithSpaceCase(input);
         default:
             throw new Error("Unsupported string case");
     }

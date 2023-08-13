@@ -10,7 +10,7 @@ function arrayWithRandomOrder(input, seed) {
     const result = [...input];
     let currentIndex = result.length;
     let randomIndex;
-    const rand = (0, randomNumberGivenInput_1.randomNumberSequenceGivenInput)(seed !== null && seed !== void 0 ? seed : Math.random());
+    const rand = randomNumberGivenInput_1.randomNumberSequenceGivenInput(seed !== null && seed !== void 0 ? seed : Math.random());
     while (currentIndex != 0) {
         randomIndex = Math.floor(NumberUtil_1.NumberUtil.numberWithRangeMap(rand.next().value, 0, 1, 0, currentIndex));
         currentIndex--;

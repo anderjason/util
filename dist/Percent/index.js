@@ -48,6 +48,9 @@ class Percent {
         if (upperBound == null || isNaN(upperBound)) {
             throw new Error("Upper bound is required");
         }
+        if (lowerBound === upperBound && lowerBound === position) {
+            return Percent.ofFull();
+        }
         if (lowerBound >= upperBound) {
             throw new Error("Lower bound must be less than upper bound");
         }

@@ -9,7 +9,7 @@ function stringWithOnlyInitialCapital(input) {
     if (input.length === 0) {
         return input;
     }
-    const split = (0, stringWithSpaceCase_1.stringWithSpaceCase)(input);
+    const split = stringWithSpaceCase_1.stringWithSpaceCase(input);
     return split.charAt(0).toUpperCase() + split.slice(1).toLowerCase();
 }
 exports.stringWithOnlyInitialCapital = stringWithOnlyInitialCapital;
